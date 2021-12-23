@@ -1,0 +1,144 @@
+
+/* mobile and tablet */
+@media (max-width: 1023px) {
+    :root{
+        --header-height: 68px;
+        --navbar-height: 0px ;
+    }
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+
+    .header{
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+    }
+
+    .app__container{
+        margin-top: calc(var(--header-height) + var(--height-sort-bar) * 2);
+    }
+    .header-cart__box{
+        position: fixed;
+        top: var(--header-search);
+        right: 0;
+
+        width: 100%;
+        padding:0 calc((100% - 644px)/2);
+        max-height: 30vh;
+        overflow-y: auto;
+
+    }
+    .header-cart__box::after{
+        display: none;
+    }
+    .header-sort-bar{
+        display: flex;
+    }
+
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet{
+        display: none;
+    }
+    .header__cart{
+        margin: 0 10px;
+    }
+}
+
+
+/* mobile  */
+@media (max-width: 739px) {
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .electric-product__container{
+        margin: 0 4px 10px;
+    }
+
+    .header-with-search{
+        justify-content: space-between;
+        margin: 0 16px;
+    }
+    .header__cart{
+        margin: 0;
+    }
+
+
+    .header-search-mobile{
+        display: block;
+    }
+    
+
+    .header__search{
+        position: fixed;
+        top: var(--header-height);
+        right: 0;
+        left: 0;
+        z-index: 1;
+        font-size: 1.2rem;
+        height: var(--height-sort-bar);
+        margin: 0 2px;
+        animation: searchFadeIn linear .3s;
+        display: none;
+    }
+
+    @keyframes searchFadeIn{
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
+
+    .header__search-checkbox:checked ~ .header__search{
+            display: flex;
+    }
+
+    .header-search__history{
+        position: fixed;
+        top:calc(var(--header-height) + var(--height-sort-bar));
+        left: 0;
+        width: 100%
+    }
+    .header-search__select{
+        width: 100px;
+        margin-right: 0;
+    }
+
+    .header-search__icon-search{
+        width: 40px;
+    }
+
+    /* header category mobile sort */
+    .category-mobile{
+        display: block;
+    }
+
+    /* pagination style */
+    .pagination{
+        font-size: 1.4rem;
+    }
+    .pagination-item{
+        margin: 0;
+    }
+    .pagination-item__link{
+        min-width: 36px;
+        height: 28px;
+    }
+
+    /* footer adjustment */
+    .mobile-adjustment{
+        text-align: center;
+    }
+    .footer__Dshop-download-list{
+        justify-content: center;
+    }
+
+}

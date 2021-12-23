@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economic Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
 </head>
 <body>
     <div class="app">
         <header class="header">
-           <div class="grid">
-                <nav class="navbar">
+           <div class="grid wide">
+                <nav class="navbar hide-on-mobile-tablet">
                     <ul class="navbar__list">
                         <li class="navbar__list-item"><a href="#">Join as seller</a></li>
                         <li class="navbar__list-item--appear-qr navbar__list-item">
@@ -101,9 +105,15 @@
                 </nav>
 
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header-search-mobile">
+                        <i class="header-search-mobile__icon fas fa-search"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
+                        <a href="/Dshop/">
                             <img class="header__logo-img" src="./assets/image/logo2.png" alt="Logo">
+                        </a>
                     </div>
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">    
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -111,6 +121,18 @@
                             <div class="header-search__history">
                                 <h3>Search history</h3>
                                 <ul class="search-history__list">
+                                    <li class="search-history__item">
+                                        <a href="#">electric normal</a>
+                                    </li>
+                                    <li class="search-history__item">
+                                        <a href="#">electric luxury</a>
+                                    </li>
+                                    <li class="search-history__item">
+                                        <a href="#">electric normal</a>
+                                    </li>
+                                    <li class="search-history__item">
+                                        <a href="#">electric luxury</a>
+                                    </li>
                                     <li class="search-history__item">
                                         <a href="#">electric normal</a>
                                     </li>
@@ -142,7 +164,7 @@
                     </div>
 
                     <div class="header__cart">
-                        <a href="#">
+                        <a class="header__cart-icon" href="#">
                             <i class="fas fa-shopping-cart"></i>
                             <span class="header-cart__badge">3</span>
                         </a>
@@ -150,10 +172,119 @@
                         <!-- header-cart__box--no-item -->
                         <div class="header-cart__box">
                             <img src="./assets/image/no_cart.png" alt="no_cart" class="header-cart-no-item__img">
+                            <h3>Recently added products</h3>
+                            <div class="cart__product-container">
+                                <ul class="cart__product-list">
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/750a433e6af5e7709900f81fa751cd4a" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple Watch Series 7 41mm GPS Sport Band</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>10.000.000</p>
+                                    </li>
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/fae059e8ef37a7c76884561b724a6576_tn" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple MacBook Air (2020) M1 Chip, 13.3-inch, 8GB, 256GB SSD</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>25.000.000</p>
+                                    </li>
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/0f7f26ebc29fe9187512eb0dcd091be0" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple iPhone 13 128GB</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>24.000.000</p>
+                                    </li>
+
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/750a433e6af5e7709900f81fa751cd4a" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple Watch Series 7 41mm GPS Sport Band</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>10.000.000</p>
+                                    </li>
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/fae059e8ef37a7c76884561b724a6576_tn" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple MacBook Air (2020) M1 Chip, 13.3-inch, 8GB, 256GB SSD</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>25.000.000</p>
+                                    </li>
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/0f7f26ebc29fe9187512eb0dcd091be0" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple iPhone 13 128GB</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>24.000.000</p>
+                                    </li>
+
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/750a433e6af5e7709900f81fa751cd4a" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple Watch Series 7 41mm GPS Sport Band</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>10.000.000</p>
+                                    </li>
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/fae059e8ef37a7c76884561b724a6576_tn" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple MacBook Air (2020) M1 Chip, 13.3-inch, 8GB, 256GB SSD</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>25.000.000</p>
+                                    </li>
+                                    <li class="cart__product-item">
+                                        <img src="https://cf.shopee.vn/file/0f7f26ebc29fe9187512eb0dcd091be0" alt="" class="cart-product__img">
+                                        <p class="cart-item__product-name">Apple iPhone 13 128GB</p>
+                                        <p class="cart-item__product-cost"> <span>đ </span>24.000.000</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <div class="header-cart__box-button"> -->
+                                <button class="btn btn--primary header-cart__box-button">View My Shoping Cart</button>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
            </div> 
+           <ul class="header-sort-bar">
+               <li class="header-sort-bar__item">
+                   <a href="#" class="header-sort-bar__link">
+                        Realate
+                    </a>
+                </li>
+               <li class="header-sort-bar__item header-sort-bar__item-active">
+                   <a href="#" class="header-sort-bar__link">
+                        Lastest
+                    </a>
+                </li>
+               <li class="header-sort-bar__item">
+                   <a href="#" class="header-sort-bar__link">
+                         Top sales
+                    </a>
+                </li>
+               <li class="header-sort-bar__item">
+                   <a href="#" class="header-sort-bar__link">
+                         Price
+                    </a>
+                </li>
+           </ul>
+
+           <nav class="category-mobile">
+            <ul class="category-mobile__list">
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Electric new Electric new Electric new</a>
+                </li>
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Techology and Life</a>
+                </li>
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Techology for feture</a>
+                </li>
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Electric new</a>
+                </li>
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Techology and Life Techology and Life Techology and Life</a>
+                </li>
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Techology for feture</a>
+                </li>
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Electric new</a>
+                </li>
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Techology and Life</a>
+                </li>
+                <li class="category-mobile__item">
+                    <a href="#" class="category-mobile-item__link">Techology for feture</a>
+                </li>
+            </ul>
+        </nav>
 
         </header>
 
@@ -251,7 +382,1296 @@
             </div>
         </div> -->
 
+        <!-- nav category mobile -->
         
+        <!-- ------------end------------ -->
+        <div class="app__container">
+            <div class="grid wide">
+                <div class="row sm-gutter">
+                    <div class="col l-2 m-3 c-0">
+                        <nav class="electric-cagory__navbar">
+                            <h3 class="app-container-category__heading">
+                                <i class="fas fa-list"></i>
+                                Category
+                            </h3>
+    
+                            <ul class="category__list">
+                                <li class="category__item category__item--active">
+                                    <a href="#" class="category__link">Television</a>
+                                </li>
+    
+                                <li class="category__item">
+                                    <a href="#" class="category__link">Computer</a>
+                                </li>
+                                <li class="category__item">
+                                    <a href="#" class="category__link">Laptop</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col l-10 m-9 c-12">
+                        <div class="electric-filter hide-on-mobile-tablet">
+                            <span class="">Sort by</span>
+                            <button class="btn electric-filter__btn  btn--primary">Popular</button>
+                            <button class="btn electric-filter__btn">Lastest</button>
+                            <button class="btn electric-filter__btn">Top sales</button>
+                            <div class="selection__box">
+                                <span>Price</span>
+                                <i class="fas fa-chevron-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">
+                                            Price: Low to High
+                                        </a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="#" class="select-input__link">
+                                            Price: High to Low
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="electric-filter__page">
+                                <span class="electric__page">
+                                    <span class="electric__page-curent">1</span>/100
+                                </span>
+                                <div class="electric__page-control">
+                                    <a href="#" class="electric__page-back">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                    <a href="#" class="electric__page-next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="electric-product__container">
+                            <div class="row sm-gutter">
+                                <!-- product item -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a href="#">
+                                        <div class="electric-product__box">
+                                            <div class="electric-product__img">
+                                                <div class="electric-product__img-bg" style="background-image: url(https://cf.shopee.vn/file/d35db188e8f7ad9daf89525614c446ea_tn);">
+                                                </div>
+                                                <div class="electric-product__preferred-lable">
+                                                    <i class="fas fa-check"></i>
+                                                    <span>Preferred</span>
+                                                </div>
+                                                <div class="electric-product__saleOff">
+                                                    <span class="electric-product__saleOff-pecent">40%</span>
+                                                    <span>OFF</span>
+                                                </div>
+                                                <div class="electric-product__icon-start">
+                                                    <a href="#">
+                                                        <i class="fas fa-play"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="electric-product__infor">
+                                                <div class="electric-product__infor-name">
+                                                    <p>Smart watch for man T600 series 6. Product polular for business!</p>
+                                                </div>
+                                                <div class="electric-product__infor-price">
+                                                        <span><span class="currency__vietnam">đ</span>239.000</span>
+                                                         - 
+                                                        <span><span class="currency__vietnam">đ</span>399.000</span>
+
+                                                </div>
+                                                <div class="electric-product__infor-rating">
+                                                    <span class="electric-product__infor-icon-heart liked ">
+                                                        <i class="icon__heart far fa-heart"></i>
+                                                        <i class="icon__heart--fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="electric-product__infor-star">
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="icon__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <p class="electric-product__infor-address">Ha Noi</p>
+
+                                                <!-- <h3>dsmfdsmfm</h3> -->
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>   
+                        
+                    </div>
+                </div>
+                <div class="electric__pagination">
+                    <ul class="pagination">
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">
+                                <i class="pagination-item__icon fas fa-angle-left"></i>
+                            </a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link pagination-item__link-actived">1</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">2</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">3</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">4</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">5</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">...</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">14</a>
+                        </li>
+
+
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">
+                                <i class="pagination-item__icon fas fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="grid wide mobile-adjustment">
+                <div class="row sm-gutter">
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer-heading">
+                            Customer service
+                        </h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Help Centre
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Dshop Mail
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    How To Buy
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    How To Sell
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Shipping
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Warranty Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer-heading">
+                            About Dshop
+                        </h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Dshop Careers
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Seller Centre
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Flash Deals
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    Media Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2-4 m-4 c-6">
+                        <div class="footer__payment">
+                            <h3 class="footer-heading">
+                                Payment 
+                            </h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer__Logistics">
+                            <h3 class="footer-heading">
+                                Logistics 
+                            </h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer-heading">
+                            Follow Us
+                        </h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    <i class="footer-item__link-icon fab fa-facebook"></i>
+                                    FaceBook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    <i class="footer-item__link-icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="#" class="footer-item__link">
+                                    <i class="footer-item__link-icon fab fa-linkedin"></i>
+                                    LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2-4 m-8 c-12">
+                        <h3 class="footer-heading">
+                            Dshop App Download
+                        </h3>
+                        <div class="footer__Dshop-download-list">
+                            <a href="#" class="footer__Dshop-download-qr">
+                                <img src="./assets/image/qr-code.png" alt="" class="footer__Dshop-download-qr">
+                            </a>
+                            <div class="footer__Dshop-download-app">
+                                <a href="#" class="footer-Dshop-download-app__link">
+                                    <img src="./assets/image/app-store.png" alt="App store" class="footer__Dshop-download-img">
+                                </a>
+                                <a href="#" class="footer-Dshop-download-app__link">
+                                    <img src="./assets/image/google-play.png" alt="Google play" class="footer__Dshop-download-img">
+                                </a>
+                                <a href="#" class="footer-Dshop-download-app__link">
+                                    <img src="./assets/image/app-gallery.png" alt="App gallery" class="footer__Dshop-download-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="grid">
+                    <p class="footer-bottom__text">© 2021 Dshop. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
 
     </div>
 </body>
